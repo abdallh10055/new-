@@ -1,0 +1,13 @@
+name: Render Aqlani video
+on: workflow_dispatch
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 20}
+      - run: npm ci || npm i
+      - run: npx remotion render AqlaniEthics out/aqlani-lesson4.mp4 --codec=h264 --crf=18
+      - uses: actions/upload-artifact@v4
+        with: {name: aqlani-lesson4, path: out/aqlani-lesson4.mp4}

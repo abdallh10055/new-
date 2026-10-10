@@ -1,0 +1,30 @@
+{
+  "name": "aqlani-ethics-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "build": "remotion render AqlaniEthics out/aqlani-lesson4.mp4 --codec=h264 --crf=18 --concurrency=2",
+    "still": "remotion still AqlaniEthics out/still.png",
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource-variable/cairo": "5.3.0",
+    "@fontsource-variable/montserrat": "5.3.0",
+    "@remotion/bundler": "4.0.534",
+    "@remotion/cli": "4.0.534",
+    "@remotion/media-utils": "4.0.534",
+    "@remotion/noise": "4.0.534",
+    "@remotion/paths": "4.0.534",
+    "@remotion/renderer": "4.0.534",
+    "@remotion/shapes": "4.0.534",
+    "lucide-react": "1.54.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "typescript": "5.6.3"
+  }
+}
